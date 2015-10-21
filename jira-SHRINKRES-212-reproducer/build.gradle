@@ -1,0 +1,18 @@
+group 'jira.reproducer'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.jboss.arquillian.junit:arquillian-junit-container:1.1.10.Final'
+    testCompile 'org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-gradle-depchain:2.2.0'
+    testCompile 'org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-gradle-embedded-archive:2.2.0'
+    testRuntime 'org.wildfly.arquillian:wildfly-arquillian-container-remote:1.1.0.Alpha1'
+}
